@@ -8,9 +8,12 @@ const listAllIssues = async () => {
     const httpClient = new HttpClient();
 
     const result = await httpClient.get('issues')
+
     displayIssues(issues)
     console.log(result)
 }
+
+
 const displayIssues = (issues) => {
 
     for (let issue of issues) {
