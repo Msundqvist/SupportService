@@ -1,21 +1,12 @@
+import { HttpClient } from "./helpers/httpClient.js";
 const initApp = () => {
     listAllIssues()
 
 }
 const listAllIssues = async () => {
-    const url = 'https://issuesdb-0c0c.restdb.io/rest/issues'
+    const httpClient = new HttpClient();
 
-    const response = await fetch(url, {
-        headers: {
-            'x-apikey': '67a9efe5020c067844e653ba',
-            'Content-Type': 'application/json'
-        }
-    })
-    if (response.ok) {
-        const data = await response.json();
-        console.log(data)
-    } else {
-        console.log(response.status, response.statusText)
-    }
+    const result = await httpClient.get('issues')
+    console.log(result)
 }
 document.addEventListener('DOMContentLoaded', initApp)
