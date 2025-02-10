@@ -1,5 +1,5 @@
 import { HttpClient } from "./helpers/httpClient.js";
-const issueLists = document.querySelector('#issueList')
+const issueLists = document.querySelector('#issuesList')
 const initApp = () => {
     listAllIssues();
 
