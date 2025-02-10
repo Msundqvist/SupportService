@@ -1,6 +1,6 @@
 export class HttpClient {
     constructor() {
-        this._url = 'https://issuesdb-0c0c.restdb.io/rest/'
+        this._url = 'https://issuesdb-0c0c.restdb.io/rest'
     }
     async get(endpoint) {
         try {
